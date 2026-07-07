@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>尾﨑 巧 / Takumi Ozaki - Hitotsubashi University</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --paper:#E7E3D8;
+    --paper-soft:#EFEBE0;
+    --ink:#24241E;
+    --ink-soft:#5A5A50;
+    --navy:#2B3B4E;
+    --brick:#9C4A3A;
+    --sage:#6E7B5E;
+    --line:#C9C3B0;
+
+    --font-display:'Fraunces','Noto Serif JP',serif;
+    --font-body:'IBM Plex Sans','Noto Sans JP',sans-serif;
+    --font-mono:'IBM Plex Mono',monospace;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+}
+
+a{
+    color:var(--navy);
+    text-decoration:none;
+}
+
+.wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 32px;
+}
+
+/* -------------------- */
+/* Navigation */
+/* -------------------- */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+}
+
+.topbar-inner{
+    max-width:920px;
+    margin:auto;
+    padding:16px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:var(--font-mono);
+    font-size:12px;
+}
+
+.topbar-name{
+    font-weight:500;
+}
+
+.topbar-nav{
+    display:flex;
+    gap:22px;
+}
+
+.topbar-nav a{
+    color:var(--ink-soft);
+}
+
+.topbar-nav a:hover{
+    color:var(--brick);
+}
+
+@media(max-width:760px){
+
+.topbar-nav{
+display:none;
+}
+
+}
+
+/* -------------------- */
+/* Hero */
+/* -------------------- */
+
+.hero{
+
+padding:90px 0 70px;
+
+border-bottom:1px solid var(--line);
+
+display:grid;
+
+grid-template-columns:1fr 190px;
+
+gap:50px;
+
+align-items:start;
+
+}
+
+.hero-photo{
+
+width:190px;
+
+height:230px;
+
+object-fit:cover;
+
+border:1px solid var(--line);
+
+}
+
+.stamp{
+
+display:inline-block;
+
+border:1px solid var(--brick);
+
+padding:4px 10px;
+
+font-size:11px;
+
+font-family:var(--font-mono);
+
+color:var(--brick);
+
+margin-bottom:28px;
+
+}
+
+.hero h1{
+
+font-family:var(--font-display);
+
+font-size:46px;
+
+font-weight:500;
+
+line-height:1.35;
+
+margin:0 0 26px;
+
+}
+
+.hero-meta{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px 30px;
+
+font-size:14px;
+
+color:var(--ink-soft);
+
+}
+
+.hero-meta strong{
+
+color:var(--ink);
+
+font-weight:500;
+
+}
+
+@media(max-width:700px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-photo{
+
+width:150px;
+
+height:180px;
+
+}
+
+}
+
+/* -------------------- */
+/* Sections */
+/* -------------------- */
+
+section{
+
+padding:65px 0;
+
+border-bottom:1px solid var(--line);
+
+}
+
+.section-label{
+
+font-family:var(--font-mono);
+
+font-size:12px;
+
+letter-spacing:.08em;
+
+color:var(--brick);
+
+margin-bottom:12px;
+
+}
+
+.section-title{
+
+font-family:var(--font-display);
+
+font-size:26px;
+
+font-weight:500;
+
+margin-bottom:6px;
+
+}
+
+.section-title-en{
+
+font-family:var(--font-mono);
+
+font-size:12px;
+
+color:var(--ink-soft);
+
+margin-bottom:28px;
+
+}
+
+.lede{
+
+max-width:65ch;
+
+font-size:15.5px;
+
+}
+
+/* -------------------- */
+/* News */
+/* -------------------- */
+
+.news-list{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.news-item{
+
+display:grid;
+
+grid-template-columns:100px 1fr;
+
+gap:20px;
+
+padding:18px 0;
+
+border-top:1px solid var(--line);
+
+}
+
+.news-date{
+
+font-family:var(--font-mono);
+
+font-size:12px;
+
+color:var(--ink-soft);
+
+}
+
+.news-tag{
+
+display:inline-block;
+
+padding:2px 7px;
+
+border:1px solid var(--sage);
+
+color:var(--sage);
+
+font-size:11px;
+
+font-family:var(--font-mono);
+
+margin-right:10px;
+
+}
+
+/* -------------------- */
+/* CV style */
+/* -------------------- */
+
+.cv-list{
+
+list-style:none;
+
+margin:0;
+
+padding:0;
+
+}
+
+.cv-item{
+
+display:grid;
+
+grid-template-columns:180px 1fr;
+
+gap:20px;
+
+padding:16px 0;
+
+border-top:1px solid var(--line);
+
+}
+
+.cv-period{
+
+font-family:var(--font-mono);
+
+font-size:12px;
+
+color:var(--ink-soft);
+
+}
+
+.cv-org{
+
+color:var(--ink-soft);
+
+font-size:14px;
+
+margin-top:4px;
+
+}
+
+@media(max-width:640px){
+
+.news-item,
+
+.cv-item{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+footer{
+
+padding:50px 0;
+
+text-align:center;
+
+font-size:13px;
+
+color:var(--ink-soft);
+
+}
+
+</style>
+
+</head><body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-name">Takumi Ozaki</div>
+
+    <nav class="topbar-nav">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+
+  <div>
+
+    <span class="stamp">PERSONAL WEBSITE</span>
+
+    <h1>
+      尾﨑 巧<br>
+      Takumi Ozaki
+    </h1>
+
+    <div class="hero-meta">
+
+      <div>
+        <strong>Affiliation</strong><br>
+        Graduate School of Economics<br>
+        Hitotsubashi University
+      </div>
+
+      <div>
+        <strong>Research</strong><br>
+        International Political Economy<br>
+        Development Economics
+      </div>
+
+      <div>
+        <strong>Location</strong><br>
+        Tokyo, Japan
+      </div>
+
+    </div>
+
+  </div>
+
+  <img src="photo.jpg" alt="Profile Photo" class="hero-photo">
+
+</header>
+
+<section id="about">
+
+<div class="section-label">
+ABOUT
+</div>
+
+<h2 class="section-title">
+About
+</h2>
+
+<div class="section-title-en">
+Biography
+</div>
+
+<p class="lede">
+
+I am a master's student in the Graduate School of Economics at Hitotsubashi University.
+My research interests include international political economy, development economics, environmental economics, and energy policy.
+I am particularly interested in how political institutions and international cooperation influence economic development and the global energy transition.
+
+</p>
+
+</section>
+
+<section id="news">
+
+<div class="section-label">
+NEWS
+</div>
+
+<h2 class="section-title">
+News
+</h2>
+
+<div class="section-title-en">
+Recent Updates
+</div>
+
+<ul class="news-list">
+
+<li class="news-item">
+<div class="news-date">
+2026.08
+</div>
+
+<div>
+<span class="news-tag">Exchange</span>
+
+Participating in an exchange program in Canada.
+</div>
+
+</li>
+
+<li class="news-item">
+
+<div class="news-date">
+2026.07
+</div>
+
+<div>
+<span class="news-tag">Website</span>
+
+Launched my personal academic website.
+</div>
+
+</li>
+
+<li class="news-item">
+
+<div class="news-date">
+2026.06
+</div>
+
+<div>
+<span class="news-tag">Research</span>
+
+Started a research project on international political economy and energy transition.
+</div>
+
+</li>
+
+</ul>
+
+</section><section id="research">
+
+<div class="section-label">
+RESEARCH
+</div>
+
+<h2 class="section-title">
+Research Interests
+</h2>
+
+<div class="section-title-en">
+Fields
+</div>
+
+<p class="lede">
+My current research interests include international political economy, development economics, environmental economics, energy policy, and quantitative empirical analysis using panel data.
+</p>
+
+</section>
+
+<section id="education">
+
+<div class="section-label">
+EDUCATION
+</div>
+
+<h2 class="section-title">
+Education
+</h2>
+
+<div class="section-title-en">
+Academic Background
+</div>
+
+<ul class="cv-list">
+
+<li class="cv-item">
+<div class="cv-period">
+2025–Present
+</div>
+
+<div>
+Graduate School of Economics, Hitotsubashi University
+<div class="cv-org">
+Master's Program
+</div>
+</div>
+
+</li>
+
+<li class="cv-item">
+
+<div class="cv-period">
+2021–2025
+</div>
+
+<div>
+Faculty of Economics, Hitotsubashi University
+<div class="cv-org">
+Bachelor of Economics
+</div>
+</div>
+
+</li>
+
+</ul>
+
+</section>
+
+<section id="projects">
+
+<div class="section-label">
+PROJECTS
+</div>
+
+<h2 class="section-title">
+Projects
+</h2>
+
+<div class="section-title-en">
+Selected Work
+</div>
+
+<ul class="cv-list">
+
+<li class="cv-item">
+<div class="cv-period">
+2026
+</div>
+
+<div>
+Energy Transition and International Political Economy
+<div class="cv-org">
+Research project using panel data analysis in R.
+</div>
+</div>
+</li>
+
+<li class="cv-item">
+<div class="cv-period">
+2025–
+</div>
+
+<div>
+Exchange Program Preparation
+<div class="cv-org">
+Research plan and coursework for study abroad in Canada.
+</div>
+</div>
+</li>
+
+</ul>
+
+</section>
+
+<section id="cv">
+
+<div class="section-label">
+CURRICULUM VITAE
+</div>
+
+<h2 class="section-title">
+CV
+</h2>
+
+<div class="section-title-en">
+Documents
+</div>
+
+<p>
+<a href="cv.pdf" target="_blank">Download CV (PDF)</a>
+</p>
+
+</section>
+
+<section id="contact">
+
+<div class="section-label">
+CONTACT
+</div>
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<div class="section-title-en">
+Get in Touch
+</div>
+
+<p>
+Email:
+<a href="mailto:yourmail@example.com">
+yourmail@example.com
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/yourusername" target="_blank">
+https://github.com/yourusername
+</a>
+</p>
+
+<p>
+X (Twitter):
+<a href="https://x.com/yourusername" target="_blank">
+@yourusername
+</a>
+</p>
+
+</section>
+
+<footer>
+
+© 2026 Takumi Ozaki
+
+</footer>
+
+</div>
+
+</body>
+</html>
