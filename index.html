@@ -43,9 +43,12 @@
   .topbar-nav a:hover{color:var(--brick);}
   @media(max-width:760px){.topbar-nav{display:none;}}
 
-  .hero{padding:96px 0 72px;border-bottom:1px solid var(--line);}
+  .hero{
+    padding:96px 0 72px;border-bottom:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
   .hero-photo{
-    width:56px;height:56px;border-radius:50%;object-fit:cover;
+    width:64px;height:64px;border-radius:50%;object-fit:cover;
     border:1px solid var(--line);flex-shrink:0;
   }
   .stamp{
@@ -54,10 +57,10 @@
   }
   .hero h1{
     font-family:var(--font-display);font-weight:500;
-    font-size:clamp(28px,4vw,46px);line-height:1.4;margin:0 0 28px;max-width:17ch;
+    font-size:clamp(28px,4vw,46px);line-height:1.4;margin:0 0 36px;max-width:17ch;
   }
-  .hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;font-size:14px;color:var(--ink-soft);}
-  .hero-meta-text{display:flex;flex-direction:column;gap:6px;}
+  .hero-meta{display:flex;flex-direction:column;align-items:center;gap:12px;font-size:14px;color:var(--ink-soft);}
+  .hero-meta-text{display:flex;flex-direction:column;align-items:center;gap:6px;}
   .hero-meta strong{color:var(--ink);font-weight:500;}
 
   section{padding:64px 0;border-bottom:1px solid var(--line);}
